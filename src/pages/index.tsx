@@ -68,6 +68,16 @@ const Menu: React.FC = () => {
       label: "Tebak Tebakan",
       color: "teal",
     },
+    {
+      href: "/game/word-scramble",
+      label: "Tebak Huruf",
+      color: "blue",
+    },
+    {
+      href: "/game/bet-game",
+      label: "Game Judi",
+      color: "yellow",
+    },
   ];
 
   const CustomLink = ({
