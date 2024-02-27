@@ -4,7 +4,7 @@ interface ModalProps {
   onClose: () => void;
 }
 
-const Modal: React.FC<ModalProps> = ({ onClose }) => {
+const PuzzleModal: React.FC<ModalProps> = ({ onClose }) => {
   return (
     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50">
       <div className="bg-green-400 p-8 rounded-lg">
@@ -21,4 +21,4 @@ const Modal: React.FC<ModalProps> = ({ onClose }) => {
   );
 };
 
-export default Modal;
+export default PuzzleModal;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Modal from "./modal";
+
 import { useRouter } from "next/router";
+import PuzzleModal from "./puzzleModal";
 
 const PuzzleGame: React.FC = () => {
   const router = useRouter();
@@ -189,7 +190,7 @@ const PuzzleGame: React.FC = () => {
       >
         New Game
       </button>
-      {showModal && <Modal onClose={() => setShowModal(false)} />}
+      {showModal && <PuzzleModal onClose={() => setShowModal(false)} />}
     </div>
   );
 };
