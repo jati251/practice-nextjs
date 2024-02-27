@@ -29,7 +29,7 @@ const Menu: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-purple-500 to-pink-500 min-h-screen flex items-center justify-center">
+    <div className="bg-gradient-to-br from-purple-500 to-pink-500 max-h-screen min-h-screen flex items-center justify-center">
       <div className="bg-white p-8 rounded-lg shadow-lg">
         <div className="flex items-center justify-center ">
           <form onSubmit={handleSubmit} className="flex mb-10 shadow-lg">
