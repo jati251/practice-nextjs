@@ -140,7 +140,7 @@ const Menu: React.FC = () => {
 
           {correct && (
             <CustomLink
-              color={"blue"}
+              color={"pink"}
               href="/game/valentino-dilla"
               label="Valentino Dilla"
             />
