@@ -24,8 +24,72 @@ const Menu: React.FC = () => {
   };
 
   const handleClosePopup = () => {
-
     setShowPopup(false);
+  };
+
+  const routes = [
+    {
+      href: "/game/emoji-memory-match",
+      label: "Emoji Memory Match",
+      color: "red",
+    },
+    {
+      href: "/game/tic-tac-toe",
+      label: "Tic Tac Toe",
+      color: "teal",
+    },
+    {
+      href: "/game/hangman",
+      label: "Hangman",
+      color: "blue",
+    },
+    {
+      href: "/game/snake-game",
+      label: "Snake Game",
+      color: "pink",
+    },
+    {
+      href: "/game/calculator",
+      label: "Calculator",
+      color: "yellow",
+    },
+    {
+      href: "/game/rock-paper-scissors",
+      label: "Rock Papers Scissors",
+      color: "cyan",
+    },
+    {
+      href: "/game/tetris",
+      label: "Tetris",
+      color: "red",
+    },
+    {
+      href: "/game/guessing-game",
+      label: "Tebak Tebakan",
+      color: "teal",
+    },
+  ];
+
+  const CustomLink = ({
+    href,
+    label,
+    color,
+  }: {
+    href: string;
+    label: string;
+    color: string;
+  }) => {
+    return (
+      <li className="mb-4">
+        <Link href={href}>
+          <div
+            className={`block bg-${color}-400 text-white p-6 rounded-md text-center hover:bg-purple-700 transition-colors duration-300 cursor-pointer`}
+          >
+            {label}
+          </div>
+        </Link>
+      </li>
+    );
   };
 
   return (
@@ -50,70 +114,21 @@ const Menu: React.FC = () => {
         </div>
         <h1 className="text-3xl font-bold text-center mb-8">Choose a Game:</h1>
         <ul className="flex flex-col items-center overflow-y-auto h-[400px]">
-          <li className="mb-4">
-            <Link href="/game/emoji-memory-match" passHref>
-              <div className="block bg-purple-600 text-white p-6 rounded-md text-center hover:bg-purple-700 transition-colors duration-300 cursor-pointer">
-                Emoji Memory Match
-              </div>
-            </Link>
-          </li>
-          <li className="mb-4">
-            <Link href="/game/tic-tac-toe" passHref>
-              <div className="block bg-pink-500 text-white p-6 rounded-md text-center hover:bg-purple-700 transition-colors duration-300 cursor-pointer">
-                Tic Tac Toe
-              </div>
-            </Link>
-          </li>
-          <li className="mb-4">
-            <Link href="/game/hangman" passHref>
-              <div className="block bg-green-600 text-white p-6 rounded-md text-center hover:bg-purple-700 transition-colors duration-300 cursor-pointer">
-                Hangman
-              </div>
-            </Link>
-          </li>
-          <li className="mb-4">
-            <Link href="/game/snake-game" passHref>
-              <div className="block bg-yellow-400 text-green-700 p-6 rounded-md text-center hover:bg-purple-700 transition-colors duration-300 cursor-pointer">
-                Snake Game
-              </div>
-            </Link>
-          </li>
-          <li className="mb-4">
-            <Link href="/game/calculator" passHref>
-              <div className="block bg-blue-400 text-white p-6 rounded-md text-center hover:bg-purple-700 transition-colors duration-300 cursor-pointer">
-                Calculator
-              </div>
-            </Link>
-          </li>
-          <li className="mb-4">
-            <Link href="/game/rock-paper-scissors" passHref>
-              <div className="block bg-red-400 text-white p-6 rounded-md text-center hover:bg-purple-700 transition-colors duration-300 cursor-pointer">
-                Rock Papers Scissors
-              </div>
-            </Link>
-          </li>
-          <li className="mb-4">
-            <Link href="/game/tetris" passHref>
-              <div className="block bg-cyan-400 text-white p-6 rounded-md text-center hover:bg-purple-700 transition-colors duration-300 cursor-pointer">
-                Tetris
-              </div>
-            </Link>
-          </li>
-          <li className="mb-4">
-            <Link href="/game/guessing-game" passHref>
-              <div className="block bg-teal-400 text-white p-6 rounded-md text-center hover:bg-purple-700 transition-colors duration-300 cursor-pointer">
-                Tebak Tebakan
-              </div>
-            </Link>
-          </li>
+          {routes.map((el, i) => (
+            <CustomLink
+              color={el.color}
+              key={i}
+              href={el.href}
+              label={el.label}
+            />
+          ))}
+
           {correct && (
-            <li className="mb-4">
-              <Link href="/game/valentino-dilla" passHref>
-                <div className="block bg-pink-400 text-blue-700 p-6 rounded-md text-center hover:bg-purple-700 transition-colors duration-300 cursor-pointer">
-                  Valentino Dilla
-                </div>
-              </Link>
-            </li>
+            <CustomLink
+              color={"blue"}
+              href="/game/valentino-dilla"
+              label="Valentino Dilla"
+            />
           )}
           {/* Add more games here */}
         </ul>
