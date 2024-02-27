@@ -64,7 +64,10 @@ const BetGame: React.FC = () => {
       <h1 className="text-3xl font-bold mb-4">🎲 Bet Game 🎲</h1>
       <p className="p-5 text-xl">💰 Balance: ${balance}</p>
       <div className="mb-4">
-        <label htmlFor="betAmount" className="mr-2">
+        <label
+          htmlFor="betAmount"
+          className="mr-2 text-center flex flex-col items-center"
+        >
           💰 Bet Amount:
         </label>
         <input
@@ -75,7 +78,7 @@ const BetGame: React.FC = () => {
           className="border border-white rounded-md px-3 py-1 bg-transparent text-white focus:outline-none focus:border-blue-300"
         />
       </div>
-      <div className="mb-4">
+      <div className="mb-4 flex flex-col items-center">
         <label htmlFor="betNumber" className="mr-2">
           🔢 Bet Number (1-6):
         </label>

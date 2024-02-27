@@ -36,27 +36,27 @@ const Menu: React.FC = () => {
     {
       href: "/game/tic-tac-toe",
       label: "Tic Tac Toe",
-      color: "teal",
+      color: "blue",
     },
     {
       href: "/game/hangman",
       label: "Hangman",
-      color: "blue",
+      color: "pink",
     },
     {
       href: "/game/snake-game",
       label: "Snake Game",
-      color: "pink",
+      color: "red",
     },
     {
       href: "/game/calculator",
       label: "Calculator",
-      color: "yellow",
+      color: "blue",
     },
     {
       href: "/game/rock-paper-scissors",
       label: "Rock Papers Scissors",
-      color: "cyan",
+      color: "pink",
     },
     {
       href: "/game/tetris",
@@ -66,17 +66,17 @@ const Menu: React.FC = () => {
     {
       href: "/game/guessing-game",
       label: "Tebak Tebakan",
-      color: "teal",
+      color: "blue",
     },
     {
       href: "/game/word-scramble",
       label: "Tebak Huruf",
-      color: "blue",
+      color: "pink",
     },
     {
       href: "/game/bet-game",
       label: "Game Judi",
-      color: "yellow",
+      color: "red",
     },
   ];
 
