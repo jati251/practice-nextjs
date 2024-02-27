@@ -78,6 +78,20 @@ const Menu: React.FC = () => {
               </div>
             </Link>
           </li>
+          <li className="mb-4">
+            <Link href="/game/calculator" passHref>
+              <div className="block bg-blue-400 text-white p-6 rounded-md text-center hover:bg-purple-700 transition-colors duration-300 cursor-pointer">
+                Calculator
+              </div>
+            </Link>
+          </li>
+          <li className="mb-4">
+            <Link href="/game/rock-paper-scissors" passHref>
+              <div className="block bg-red-400 text-white p-6 rounded-md text-center hover:bg-purple-700 transition-colors duration-300 cursor-pointer">
+                Rock Papers Scissors
+              </div>
+            </Link>
+          </li>
           {correct && (
             <li className="mb-4">
               <Link href="/game/valentino-dilla" passHref>
