@@ -14,17 +14,17 @@ const Menu: React.FC = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Here you can handle the submission of the input value
+
     if (value === "15nov") {
       setShowPopup(true);
       isCorrect(true);
     }
-    // Optionally, you can clear the input value after submission
+
     setValue("");
   };
 
   const handleClosePopup = () => {
-    // Hide the congratulations popup
+
     setShowPopup(false);
   };
 

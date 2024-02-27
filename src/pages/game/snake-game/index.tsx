@@ -5,7 +5,7 @@ const GRID_SIZE = 19;
 const CELL_SIZE = 19;
 const INITIAL_SNAKE_LENGTH = 5;
 const INITIAL_DIRECTION = "right";
-const INITIAL_SPEED = 150; // in milliseconds
+const INITIAL_SPEED = 150; 
 
 const SnakeGame: React.FC = () => {
   const generateRandomPosition = (): [number, number] => {

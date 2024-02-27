@@ -60,15 +60,12 @@ const Tetris: React.FC = () => {
 
     const newPosY = currentPosition.y + 1;
 
-    // Check collision with the bottom or other filled cells
     if (checkCollision(currentPosition.x, newPosY, currentShape)) {
-      // Shape collided, update board and set new shape
       updateBoard(currentPosition.x, currentPosition.y, currentShape);
       const newShape = getRandomShape();
-      setCurrentShape(newShape); // Set new random shape
-      setCurrentPosition({ x: Math.floor(COLS / 2) - 1, y: 0 }); // Reset position
+      setCurrentShape(newShape);
+      setCurrentPosition({ x: Math.floor(COLS / 2) - 1, y: 0 });
     } else {
-      // Move shape down
       setCurrentPosition({ x: currentPosition.x, y: newPosY });
     }
   };
@@ -118,12 +115,12 @@ const Tetris: React.FC = () => {
               boardCol < COLS &&
               board[boardRow][boardCol])
           ) {
-            return true; // Collision detected
+            return true;
           }
         }
       }
     }
-    return false; // No collision
+    return false;
   };
 
   const updateBoard = (x: number, y: number, shape: Shape) => {
@@ -139,7 +136,7 @@ const Tetris: React.FC = () => {
             boardCol >= 0 &&
             boardCol < COLS
           ) {
-            newBoard[boardRow][boardCol] = 1; // Set cell as filled
+            newBoard[boardRow][boardCol] = 1;
           }
         }
       });

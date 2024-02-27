@@ -8,8 +8,8 @@ const TicTacToe: React.FC = () => {
   const [winner, setWinner] = useState<string | null>(null);
 
   useEffect(() => {
-    checkWinner(); // Check for winner after each move
-  }, [board]); // Trigger effect whenever the board changes
+    checkWinner();
+  }, [board]); 
 
   const checkWinner = () => {
     const lines = [
@@ -26,7 +26,7 @@ const TicTacToe: React.FC = () => {
       const [a, b, c] = lines[i];
       if (board[a] && board[a] === board[b] && board[a] === board[c]) {
         setWinner(board[a]);
-        return; // Exit the function early if a winner is found
+        return; 
       }
     }
   };
