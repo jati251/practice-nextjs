@@ -21,7 +21,6 @@ const SnakeGame: React.FC = () => {
 
   const router = useRouter();
 
-
   const [snake, setSnake] = useState<[number, number][]>([]);
   const [food, setFood] = useState<[number, number]>(generateRandomPosition());
   const [direction, setDirection] = useState<string>(INITIAL_DIRECTION);

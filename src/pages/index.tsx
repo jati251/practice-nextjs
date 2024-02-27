@@ -49,7 +49,7 @@ const Menu: React.FC = () => {
           </form>
         </div>
         <h1 className="text-3xl font-bold text-center mb-8">Choose a Game:</h1>
-        <ul className="flex flex-col items-center">
+        <ul className="flex flex-col items-center overflow-y-auto h-[400px]">
           <li className="mb-4">
             <Link href="/game/emoji-memory-match" passHref>
               <div className="block bg-purple-600 text-white p-6 rounded-md text-center hover:bg-purple-700 transition-colors duration-300 cursor-pointer">
@@ -89,6 +89,13 @@ const Menu: React.FC = () => {
             <Link href="/game/rock-paper-scissors" passHref>
               <div className="block bg-red-400 text-white p-6 rounded-md text-center hover:bg-purple-700 transition-colors duration-300 cursor-pointer">
                 Rock Papers Scissors
+              </div>
+            </Link>
+          </li>
+          <li className="mb-4">
+            <Link href="/game/tetris" passHref>
+              <div className="block bg-cyan-400 text-white p-6 rounded-md text-center hover:bg-purple-700 transition-colors duration-300 cursor-pointer">
+                Tetris
               </div>
             </Link>
           </li>
