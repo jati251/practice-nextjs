@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
 
 const loveMessages = [
@@ -31,6 +32,8 @@ const getRandomMessage = () => {
 };
 
 const ValentinePage = () => {
+  const router = useRouter();
+
   const [message, setMessage] = useState("");
   const [title, setTitle] = useState("Will you be my Valentine?");
   const [play, setPlay] = useState(false);
@@ -121,6 +124,12 @@ const ValentinePage = () => {
         <source src="/audio.mp3" type="audio/mp3" />
         Your browser does not support the audio element.
       </audio>
+      <button
+          className="mt-4 ml-4 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+          onClick={() => router.push("/")}
+        >
+          Return to Menu
+        </button>
     </div>
   );
 };
