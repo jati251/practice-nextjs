@@ -6,6 +6,7 @@ import React, { useState } from "react";
 const Menu: React.FC = () => {
   const [value, setValue] = useState("");
   const [correct, isCorrect] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
@@ -15,22 +16,28 @@ const Menu: React.FC = () => {
     event.preventDefault();
     // Here you can handle the submission of the input value
     if (value === "15nov") {
+      setShowPopup(true);
       isCorrect(true);
     }
     // Optionally, you can clear the input value after submission
     setValue("");
   };
 
+  const handleClosePopup = () => {
+    // Hide the congratulations popup
+    setShowPopup(false);
+  };
+
   return (
     <div className="bg-gradient-to-br from-purple-500 to-pink-500 min-h-screen flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg">
-        <div className="flex items-center justify-center">
-          <form onSubmit={handleSubmit} className="flex mb-10">
+      <div className="bg-white p-8 rounded-lg shadow-lg">
+        <div className="flex items-center justify-center ">
+          <form onSubmit={handleSubmit} className="flex mb-10 shadow-lg">
             <input
               type="text"
               value={value}
               onChange={handleChange}
-              className="appearance-none border border-gray-300 rounded-l-lg py-2 px-4 focus:outline-none focus:border-blue-500"
+              className="appearance-none  border border-gray-300 rounded-l-lg py-2 px-4 focus:outline-none focus:border-blue-500"
               placeholder="Enter Passcode"
             />
             <button
@@ -83,6 +90,22 @@ const Menu: React.FC = () => {
           {/* Add more games here */}
         </ul>
       </div>
+      {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center">
+          <div className="bg-white p-8 rounded-lg shadow-lg ">
+            <p className="text-2xl font-bold mb-4 text-pink-600 text-center">
+              🎉 Congratulations! 🎉
+            </p>
+            <p className="text-lg text-purple-800 text-center">{`Welcome Dilla !`}</p>
+            <button
+              className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded-lg mt-4 focus:outline-none focus:bg-pink-600"
+              onClick={handleClosePopup}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
