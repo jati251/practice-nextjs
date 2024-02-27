@@ -78,6 +78,11 @@ const Menu: React.FC = () => {
       label: "Game Judi",
       color: "red",
     },
+    {
+      href: "/game/puzzle-game",
+      label: "Puzzle Game",
+      color: "blue",
+    },
   ];
 
   const CustomLink = ({
