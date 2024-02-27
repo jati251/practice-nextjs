@@ -225,7 +225,7 @@ const Tetris: React.FC = () => {
 
   return (
     <div className="tetris bg-gradient-to-br from-purple-400 to-yellow-600 h-screen flex flex-col items-center">
-      <h1 className="text-4xl text-blue-100 font-bold mb-2 mt-2">Tetris</h1>
+      <h1 className="text-2xl text-blue-100 font-bold  mt-2">Tetris</h1>
       <div className="mb-4">
         {!isStarted && (
           <button
@@ -255,7 +255,7 @@ const Tetris: React.FC = () => {
       </div>
       <div className="controls mt-2 justify-center items-center">
         <button
-          className="mt-4 ml-4 bg-red-400 shadow-lg hover:bg-red-500 text-white font-bold py-2 px-4 rounded"
+          className="mt-2 ml-4 bg-red-400 shadow-lg hover:bg-red-500 text-white font-bold py-2 px-4 rounded"
           onClick={moveShapeLeft}
         >
           Left
