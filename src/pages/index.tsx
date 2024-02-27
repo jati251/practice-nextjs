@@ -14,7 +14,7 @@ const Menu: React.FC = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Here you can handle the submission of the input value
-    if (value === "november") {
+    if (value === "15nov") {
       isCorrect(true);
     }
     // Optionally, you can clear the input value after submission
@@ -24,14 +24,14 @@ const Menu: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-purple-500 to-pink-500 min-h-screen flex items-center justify-center">
       <div className="bg-white p-8 rounded-lg">
-        <div className="flex items-center justify-center h-screen">
-          <form onSubmit={handleSubmit} className="flex">
+        <div className="flex items-center justify-center">
+          <form onSubmit={handleSubmit} className="flex mb-10">
             <input
               type="text"
               value={value}
               onChange={handleChange}
               className="appearance-none border border-gray-300 rounded-l-lg py-2 px-4 focus:outline-none focus:border-blue-500"
-              placeholder="Enter something Gen Z..."
+              placeholder="Enter Passcode"
             />
             <button
               type="submit"
@@ -73,8 +73,8 @@ const Menu: React.FC = () => {
           </li>
           {correct && (
             <li className="mb-4">
-              <Link href="/game/snake-game" passHref>
-                <div className="block bg-pink-400 text-green-700 p-6 rounded-md text-center hover:bg-purple-700 transition-colors duration-300 cursor-pointer">
+              <Link href="/game/valentino-dilla" passHref>
+                <div className="block bg-pink-400 text-blue-700 p-6 rounded-md text-center hover:bg-purple-700 transition-colors duration-300 cursor-pointer">
                   Valentino Dilla
                 </div>
               </Link>
