@@ -145,6 +145,12 @@ const SnakeGame: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+      <button
+        className="mt-4 ml-4 mb-4 bg-green-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+        onClick={() => router.push("/")}
+      >
+        Return to Menu
+      </button>
       <div
         className="relative bg-gray-800"
         style={{
@@ -218,12 +224,7 @@ const SnakeGame: React.FC = () => {
           Down
         </button>
       </div>
-      <button
-        className="mt-4 ml-4 bg-green-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
-        onClick={() => router.push("/")}
-      >
-        Return to Menu
-      </button>
+      
     </div>
   );
 };
