@@ -34,7 +34,7 @@ const Menu: React.FC = () => {
         <div className="flex items-center justify-center ">
           <form onSubmit={handleSubmit} className="flex mb-10 shadow-lg">
             <input
-              type="text"
+              type="password"
               value={value}
               onChange={handleChange}
               className="appearance-none  border border-gray-300 rounded-l-lg py-2 px-4 focus:outline-none focus:border-blue-500"
